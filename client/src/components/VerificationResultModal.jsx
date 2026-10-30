@@ -23,11 +23,11 @@ export default function VerificationResultModal({ result, onClose }) {
   const getHeaderConfig = () => {
     if (isSuccess) {
       return {
-        bg: "bg-[#00f5a0]",
-        headerText: "text-slate-950",
-        subText: "text-slate-900/80 font-bold",
-        iconColor: "text-slate-950",
-        pillBg: "bg-[#00f5a0]/15 text-[#00f5a0] border border-[#00f5a0]/30",
+        bg: "bg-[#7C9ED9]",
+        headerText: "text-[#001733]",
+        subText: "text-[#002147]/90 font-bold",
+        iconColor: "text-[#001733]",
+        pillBg: "bg-[#7C9ED9]/20 text-[#7C9ED9] border border-[#7C9ED9]/40",
         icon: CheckCircle2,
         title: "PASS IS VALID",
         sub: "Authorized for Bus Travel",
@@ -86,7 +86,7 @@ export default function VerificationResultModal({ result, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-in fade-in duration-200">
-      <div className="w-full max-w-lg overflow-hidden rounded-3xl bg-[#12151e] border border-[#262c3e] shadow-2xl text-white">
+      <div className="w-full max-w-lg overflow-hidden rounded-3xl bg-[#042a59] border border-[#0e428a] shadow-2xl text-white">
         {/* Status Header Banner */}
         <div className={`${config.bg} p-6 ${config.headerText} text-center relative`}>
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-black/15 backdrop-blur-md mb-3 shadow-lg">
@@ -114,21 +114,21 @@ export default function VerificationResultModal({ result, onClose }) {
 
           {/* Student Profile Info */}
           {result.student && (
-            <div className="flex items-center gap-4 rounded-2xl bg-[#171b26] p-4 border border-[#23293a]">
+            <div className="flex items-center gap-4 rounded-2xl bg-[#021836] p-4 border border-[#0e428a]">
               {result.student.photoUrl ? (
                 <img
                   src={result.student.photoUrl}
                   alt={result.student.name}
-                  className="h-16 w-16 rounded-xl object-cover ring-2 ring-[#00f5a0]/40"
+                  className="h-16 w-16 rounded-xl object-cover ring-2 ring-[#7C9ED9]/50"
                 />
               ) : (
-                <div className="h-16 w-16 rounded-xl bg-slate-800 flex items-center justify-center text-slate-400">
+                <div className="h-16 w-16 rounded-xl bg-[#082b5c] flex items-center justify-center text-slate-300">
                   <User size={30} />
                 </div>
               )}
               <div className="flex-1 min-w-0">
                 <h3 className="text-base font-bold text-white truncate">{result.student.name}</h3>
-                <p className="text-xs font-mono font-bold text-[#00f5a0]">ID: {result.student.studentId}</p>
+                <p className="text-xs font-mono font-bold text-[#7C9ED9]">ID: {result.student.studentId}</p>
                 <p className="text-xs text-slate-300 truncate">{result.student.course}</p>
                 <p className="text-[11px] text-slate-400 truncate">{result.student.institution}</p>
               </div>
@@ -138,51 +138,51 @@ export default function VerificationResultModal({ result, onClose }) {
           {/* Route & Pass Details */}
           {result.pass && (
             <div className="grid grid-cols-2 gap-3 text-xs">
-              <div className="rounded-xl border border-[#23293a] bg-[#171b26] p-3">
-                <span className="text-slate-400 flex items-center gap-1">
-                  <BusFront size={13} className="text-[#00f5a0]" /> Assigned Bus
+              <div className="rounded-xl border border-[#0e428a] bg-[#021836] p-3">
+                <span className="text-slate-300 flex items-center gap-1">
+                  <BusFront size={13} className="text-[#7C9ED9]" /> Assigned Bus
                 </span>
                 <p className="mt-1 font-mono font-bold text-white text-sm">{result.pass.busNumber || "Fleet"}</p>
               </div>
 
-              <div className="rounded-xl border border-[#23293a] bg-[#171b26] p-3">
-                <span className="text-slate-400 flex items-center gap-1">
-                  <Calendar size={13} className="text-[#00f5a0]" /> Valid Until
+              <div className="rounded-xl border border-[#0e428a] bg-[#021836] p-3">
+                <span className="text-slate-300 flex items-center gap-1">
+                  <Calendar size={13} className="text-[#7C9ED9]" /> Valid Until
                 </span>
                 <p className={`mt-1 font-mono font-bold text-sm ${isExpired ? "text-amber-400" : "text-white"}`}>
                   {result.pass.expiryDate}
                 </p>
               </div>
 
-              <div className="col-span-2 rounded-xl border border-[#23293a] bg-[#171b26] p-3">
-                <span className="text-slate-400 flex items-center gap-1">
+              <div className="col-span-2 rounded-xl border border-[#0e428a] bg-[#021836] p-3">
+                <span className="text-slate-300 flex items-center gap-1">
                   <MapPin size={13} className="text-cyan-400" /> Authorized Route & Stop
                 </span>
                 <p className="mt-1 font-semibold text-white">{result.pass.routeName}</p>
-                <p className="text-[11px] text-[#00f5a0] mt-0.5">Boarding Stop: {result.pass.pickupStop}</p>
+                <p className="text-[11px] text-[#7C9ED9] mt-0.5">Boarding Stop: {result.pass.pickupStop}</p>
               </div>
             </div>
           )}
 
           {/* Emergency Contact */}
           {result.student?.emergencyContact && (
-            <div className="text-[11px] text-slate-400 flex items-center justify-between px-1">
+            <div className="text-[11px] text-slate-300 flex items-center justify-between px-1">
               <span>Emergency Contact:</span>
-              <span className="font-semibold text-slate-200">{result.student.emergencyContact}</span>
+              <span className="font-semibold text-white">{result.student.emergencyContact}</span>
             </div>
           )}
 
-          <div className="text-[10px] text-slate-500 text-center font-mono">
+          <div className="text-[10px] text-slate-400 text-center font-mono">
             Verified at {new Date(result.verifiedAt).toLocaleTimeString()} • Verified by Conductor
           </div>
         </div>
 
         {/* Modal Actions */}
-        <div className="bg-[#0b0d13] p-4 border-t border-[#1f2536] flex items-center justify-end gap-3">
+        <div className="bg-[#001733] p-4 border-t border-[#0e3b79] flex items-center justify-end gap-3">
           <button
             type="button"
             onClick={onClose}
-            className="w-full rounded-xl bg-[#00f5a0] py-3 text-xs font-black text-slate-950 transition hover:bg-[#00d68b] shadow-mint flex items-center justify-center gap-2"
+            className="w-full rounded-xl bg-[#7C9ED9] py-3 text-xs font-black text-[#001733] transition hover:bg-[#688ed0] shadow-vista flex items-center justify-center gap-2"
           >
             <span>Scan Next Pass</span>
             <ArrowRight size={16} />

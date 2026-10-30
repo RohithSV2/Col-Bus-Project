@@ -77,21 +77,21 @@ export default function RegisterPage() {
   const selectedRouteObj = routes.find((r) => r.routeId === formData.routeId);
 
   return (
-    <div className="min-h-[85vh] py-12 px-4 sm:px-6 flex items-center justify-center bg-[#090a0f]">
+    <div className="min-h-[85vh] py-12 px-4 sm:px-6 flex items-center justify-center bg-[#001733]">
       <div className="w-full max-w-xl space-y-6">
         <div className="text-center">
-          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-tr from-[#00f5a0] to-[#059669] text-slate-950 shadow-mint">
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-tr from-[#7C9ED9] to-[#3a64a8] text-[#001733] shadow-vista">
             <BusFront size={26} className="stroke-[2.5]" />
           </div>
           <h2 className="mt-4 text-2xl font-black tracking-tight text-white sm:text-3xl">
             Register for Digital Bus Pass
           </h2>
-          <p className="mt-1 text-xs text-slate-400">
+          <p className="mt-1 text-xs text-slate-300">
             Create your student transit profile and apply for your route
           </p>
         </div>
 
-        <div className="rounded-3xl border border-[#222838] bg-[#12151e] p-8 shadow-2xl">
+        <div className="rounded-3xl border border-[#0e428a] bg-[#042a59] p-8 shadow-2xl">
           {error && (
             <div className="mb-5 flex items-start gap-2 rounded-xl bg-rose-500/15 border border-rose-500/30 p-3 text-xs text-rose-300">
               <AlertCircle size={16} className="shrink-0 mt-0.5 text-rose-400" />
@@ -102,7 +102,7 @@ export default function RegisterPage() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
-                <label className="block text-xs font-bold text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-200 mb-1">
                   Student Institutional ID *
                 </label>
                 <input
@@ -111,12 +111,12 @@ export default function RegisterPage() {
                   value={formData.studentId}
                   onChange={(e) => setFormData({ ...formData, studentId: e.target.value })}
                   placeholder="e.g. COL2026045"
-                  className="w-full rounded-xl border border-[#262d3e] bg-[#0c0e15] px-3.5 py-2.5 text-xs text-white uppercase font-mono focus:border-[#00f5a0] focus:outline-none"
+                  className="w-full rounded-xl border border-[#0e428a] bg-[#001733] px-3.5 py-2.5 text-xs text-white uppercase font-mono focus:border-[#7C9ED9] focus:outline-none"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-200 mb-1">
                   Full Name *
                 </label>
                 <input
@@ -125,14 +125,14 @@ export default function RegisterPage() {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="e.g. Rohith Sharma"
-                  className="w-full rounded-xl border border-[#262d3e] bg-[#0c0e15] px-3.5 py-2.5 text-xs text-white focus:border-[#00f5a0] focus:outline-none"
+                  className="w-full rounded-xl border border-[#0e428a] bg-[#001733] px-3.5 py-2.5 text-xs text-white focus:border-[#7C9ED9] focus:outline-none"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
-                <label className="block text-xs font-bold text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-200 mb-1">
                   College / Institutional Email *
                 </label>
                 <input
@@ -141,12 +141,12 @@ export default function RegisterPage() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="student@college.edu"
-                  className="w-full rounded-xl border border-[#262d3e] bg-[#0c0e15] px-3.5 py-2.5 text-xs text-white focus:border-[#00f5a0] focus:outline-none"
+                  className="w-full rounded-xl border border-[#0e428a] bg-[#001733] px-3.5 py-2.5 text-xs text-white focus:border-[#7C9ED9] focus:outline-none"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-200 mb-1">
                   Create Password *
                 </label>
                 <input
@@ -156,14 +156,14 @@ export default function RegisterPage() {
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                   placeholder="At least 6 characters"
-                  className="w-full rounded-xl border border-[#262d3e] bg-[#0c0e15] px-3.5 py-2.5 text-xs text-white focus:border-[#00f5a0] focus:outline-none"
+                  className="w-full rounded-xl border border-[#0e428a] bg-[#001733] px-3.5 py-2.5 text-xs text-white focus:border-[#7C9ED9] focus:outline-none"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
-                <label className="block text-xs font-bold text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-200 mb-1">
                   Course / Department
                 </label>
                 <input
@@ -171,18 +171,18 @@ export default function RegisterPage() {
                   value={formData.course}
                   onChange={(e) => setFormData({ ...formData, course: e.target.value })}
                   placeholder="e.g. B.Tech Computer Science"
-                  className="w-full rounded-xl border border-[#262d3e] bg-[#0c0e15] px-3.5 py-2.5 text-xs text-white focus:border-[#00f5a0] focus:outline-none"
+                  className="w-full rounded-xl border border-[#0e428a] bg-[#001733] px-3.5 py-2.5 text-xs text-white focus:border-[#7C9ED9] focus:outline-none"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-200 mb-1">
                   Academic Year
                 </label>
                 <select
                   value={formData.year}
                   onChange={(e) => setFormData({ ...formData, year: e.target.value })}
-                  className="w-full rounded-xl border border-[#262d3e] bg-[#0c0e15] px-3.5 py-2.5 text-xs text-white focus:border-[#00f5a0] focus:outline-none"
+                  className="w-full rounded-xl border border-[#0e428a] bg-[#001733] px-3.5 py-2.5 text-xs text-white focus:border-[#7C9ED9] focus:outline-none"
                 >
                   <option value="1st Year">1st Year</option>
                   <option value="2nd Year">2nd Year</option>
@@ -193,16 +193,16 @@ export default function RegisterPage() {
               </div>
             </div>
 
-            {/* Route Selection (Mint Box) */}
-            <div className="rounded-2xl bg-[#161a25] border border-[#00f5a0]/30 p-4 space-y-3">
-              <span className="text-xs font-black uppercase tracking-wider text-[#00f5a0] flex items-center gap-1.5">
-                <MapPin size={14} className="text-[#00f5a0]" />
+            {/* Route Selection (Vista Box) */}
+            <div className="rounded-2xl bg-[#021836] border border-[#7C9ED9]/40 p-4 space-y-3">
+              <span className="text-xs font-black uppercase tracking-wider text-[#7C9ED9] flex items-center gap-1.5">
+                <MapPin size={14} className="text-[#7C9ED9]" />
                 Select Bus Route & Boarding Stop
               </span>
 
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1">
+                  <label className="block text-xs font-bold text-slate-200 mb-1">
                     Assigned Route *
                   </label>
                   <select
@@ -210,7 +210,7 @@ export default function RegisterPage() {
                     value={formData.routeId}
                     onChange={handleRouteChange}
                     disabled={loadingRoutes}
-                    className="w-full rounded-xl border border-[#262d3e] bg-[#0c0e15] px-3.5 py-2.5 text-xs text-white font-medium focus:border-[#00f5a0] focus:outline-none"
+                    className="w-full rounded-xl border border-[#0e428a] bg-[#001733] px-3.5 py-2.5 text-xs text-white font-medium focus:border-[#7C9ED9] focus:outline-none"
                   >
                     {routes.map((r) => (
                       <option key={r.routeId} value={r.routeId}>
@@ -221,14 +221,14 @@ export default function RegisterPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1">
+                  <label className="block text-xs font-bold text-slate-200 mb-1">
                     Pickup / Boarding Stop *
                   </label>
                   <select
                     required
                     value={formData.pickupStop}
                     onChange={(e) => setFormData({ ...formData, pickupStop: e.target.value })}
-                    className="w-full rounded-xl border border-[#262d3e] bg-[#0c0e15] px-3.5 py-2.5 text-xs text-white font-medium focus:border-[#00f5a0] focus:outline-none"
+                    className="w-full rounded-xl border border-[#0e428a] bg-[#001733] px-3.5 py-2.5 text-xs text-white font-medium focus:border-[#7C9ED9] focus:outline-none"
                   >
                     {selectedRouteObj?.stops?.map((stop, idx) => (
                       <option key={idx} value={stop.stopName}>
@@ -242,7 +242,7 @@ export default function RegisterPage() {
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
-                <label className="block text-xs font-bold text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-200 mb-1">
                   Mobile Phone Number
                 </label>
                 <input
@@ -250,12 +250,12 @@ export default function RegisterPage() {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="+91 98765 00000"
-                  className="w-full rounded-xl border border-[#262d3e] bg-[#0c0e15] px-3.5 py-2.5 text-xs text-white focus:border-[#00f5a0] focus:outline-none"
+                  className="w-full rounded-xl border border-[#0e428a] bg-[#001733] px-3.5 py-2.5 text-xs text-white focus:border-[#7C9ED9] focus:outline-none"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-300 mb-1">
+                <label className="block text-xs font-bold text-slate-200 mb-1">
                   Emergency Contact (Parent/Guardian)
                 </label>
                 <input
@@ -263,7 +263,7 @@ export default function RegisterPage() {
                   value={formData.emergencyContact}
                   onChange={(e) => setFormData({ ...formData, emergencyContact: e.target.value })}
                   placeholder="+91 98765 11111 (Parent)"
-                  className="w-full rounded-xl border border-[#262d3e] bg-[#0c0e15] px-3.5 py-2.5 text-xs text-white focus:border-[#00f5a0] focus:outline-none"
+                  className="w-full rounded-xl border border-[#0e428a] bg-[#001733] px-3.5 py-2.5 text-xs text-white focus:border-[#7C9ED9] focus:outline-none"
                 />
               </div>
             </div>
@@ -271,15 +271,15 @@ export default function RegisterPage() {
             <button
               type="submit"
               disabled={submitting}
-              className="mt-4 w-full rounded-xl bg-[#00f5a0] py-3 text-xs font-black text-slate-950 shadow-mint transition hover:bg-[#00d68b] disabled:opacity-50"
+              className="mt-4 w-full rounded-xl bg-[#7C9ED9] py-3 text-xs font-black text-[#001733] shadow-vista transition hover:bg-[#688ed0] disabled:opacity-50"
             >
               {submitting ? "Submitting Application..." : "Submit Pass Application"}
             </button>
           </form>
 
-          <div className="mt-6 border-t border-[#1f2434] pt-5 text-center text-xs text-slate-400">
+          <div className="mt-6 border-t border-[#0e3b79] pt-5 text-center text-xs text-slate-300">
             Already have an account?{" "}
-            <Link to="/login" className="font-bold text-[#00f5a0] hover:underline">
+            <Link to="/login" className="font-bold text-[#7C9ED9] hover:underline">
               Sign in here
             </Link>
           </div>

@@ -48,7 +48,7 @@ export default function Navbar() {
         );
       case "conductor":
         return (
-          <span className="rounded-full bg-[#00f5a0]/20 border border-[#00f5a0]/40 px-2 py-0.5 text-[10px] font-bold text-[#00f5a0]">
+          <span className="rounded-full bg-[#7C9ED9]/20 border border-[#7C9ED9]/40 px-2 py-0.5 text-[10px] font-bold text-[#7C9ED9]">
             Conductor
           </span>
         );
@@ -64,23 +64,23 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[#1f2433] bg-[#0d0f17]/90 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-[#0e428a] bg-[#001f3f]/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
         {/* Brand */}
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#00f5a0] to-[#059669] text-slate-950 shadow-mint-sm transition group-hover:scale-105">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#7C9ED9] to-[#3a64a8] text-[#001733] shadow-vista-sm transition group-hover:scale-105">
             <BusFront size={22} className="stroke-[2.5]" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-lg font-black tracking-tight text-white group-hover:text-[#00f5a0] transition">
+              <span className="text-lg font-black tracking-tight text-white group-hover:text-[#7C9ED9] transition">
                 SmartBus
               </span>
-              <span className="rounded bg-[#00f5a0]/15 border border-[#00f5a0]/30 px-1.5 py-0.5 text-[10px] font-bold text-[#00f5a0] uppercase tracking-wider">
+              <span className="rounded bg-[#7C9ED9]/15 border border-[#7C9ED9]/30 px-1.5 py-0.5 text-[10px] font-bold text-[#7C9ED9] uppercase tracking-wider">
                 v2.0
               </span>
             </div>
-            <p className="text-[11px] text-slate-400 hidden sm:block">Digital Pass & Student Transit</p>
+            <p className="text-[11px] text-slate-300 hidden sm:block">Digital Pass & Student Transit</p>
           </div>
         </Link>
 
@@ -90,8 +90,8 @@ export default function Navbar() {
             to="/"
             className={`rounded-lg px-3 py-2 transition ${
               location.pathname === "/"
-                ? "bg-[#161a25] text-[#00f5a0] border border-[#00f5a0]/30 shadow-mint-sm"
-                : "text-slate-300 hover:text-white hover:bg-[#161a25]"
+                ? "bg-[#052e64] text-[#7C9ED9] border border-[#7C9ED9]/30 shadow-vista-sm"
+                : "text-slate-300 hover:text-white hover:bg-[#052e64]"
             }`}
           >
             Home
@@ -102,8 +102,8 @@ export default function Navbar() {
               to="/student"
               className={`flex items-center gap-1.5 rounded-lg px-3 py-2 transition ${
                 location.pathname.startsWith("/student")
-                  ? "bg-[#161a25] text-[#00f5a0] border border-[#00f5a0]/30 shadow-mint-sm"
-                  : "text-slate-300 hover:text-white hover:bg-[#161a25]"
+                  ? "bg-[#052e64] text-[#7C9ED9] border border-[#7C9ED9]/30 shadow-vista-sm"
+                  : "text-slate-300 hover:text-white hover:bg-[#052e64]"
               }`}
             >
               <GraduationCap size={15} />
@@ -116,8 +116,8 @@ export default function Navbar() {
               to="/conductor"
               className={`flex items-center gap-1.5 rounded-lg px-3 py-2 transition ${
                 location.pathname.startsWith("/conductor")
-                  ? "bg-[#161a25] text-[#00f5a0] border border-[#00f5a0]/30 shadow-mint-sm"
-                  : "text-slate-300 hover:text-white hover:bg-[#161a25]"
+                  ? "bg-[#052e64] text-[#7C9ED9] border border-[#7C9ED9]/30 shadow-vista-sm"
+                  : "text-slate-300 hover:text-white hover:bg-[#052e64]"
               }`}
             >
               <QrCode size={15} />
@@ -130,8 +130,8 @@ export default function Navbar() {
               to="/admin"
               className={`flex items-center gap-1.5 rounded-lg px-3 py-2 transition ${
                 location.pathname.startsWith("/admin")
-                  ? "bg-[#161a25] text-purple-400 border border-purple-500/30"
-                  : "text-slate-300 hover:text-white hover:bg-[#161a25]"
+                  ? "bg-[#052e64] text-purple-400 border border-purple-500/30"
+                  : "text-slate-300 hover:text-white hover:bg-[#052e64]"
               }`}
             >
               <Sliders size={15} />
@@ -142,60 +142,60 @@ export default function Navbar() {
 
         {/* Right Action Bar */}
         <div className="flex items-center gap-3">
-          {/* Quick Demo Switcher Button (Electric Mint Theme) */}
+          {/* Quick Demo Switcher Button (Vista Blue & Oxford Blue Theme) */}
           <div className="relative">
             <button
               type="button"
               onClick={() => setDemoMenuOpen(!demoMenuOpen)}
               disabled={switching}
-              className="inline-flex items-center gap-1.5 rounded-xl border border-[#00f5a0]/40 bg-[#00f5a0]/10 px-3 py-1.5 text-xs font-bold text-[#00f5a0] shadow-mint-sm transition hover:bg-[#00f5a0]/20 focus:outline-none"
+              className="inline-flex items-center gap-1.5 rounded-xl border border-[#7C9ED9]/40 bg-[#7C9ED9]/15 px-3 py-1.5 text-xs font-bold text-[#7C9ED9] shadow-vista-sm transition hover:bg-[#7C9ED9]/25 focus:outline-none"
               title="Switch demo account roles"
             >
-              <Sparkles size={14} className="text-[#00f5a0] animate-pulse" />
+              <Sparkles size={14} className="text-[#7C9ED9] animate-pulse" />
               <span>{switching ? "Switching..." : "Demo Switcher"}</span>
-              <ChevronDown size={13} className="text-[#00f5a0]" />
+              <ChevronDown size={13} className="text-[#7C9ED9]" />
             </button>
 
             {demoMenuOpen && (
               <div
-                className="absolute right-0 mt-2 w-64 rounded-2xl border border-[#23293a] bg-[#12151e] p-2 shadow-2xl ring-1 ring-black/40 z-50 animate-in fade-in zoom-in-95 duration-100"
+                className="absolute right-0 mt-2 w-64 rounded-2xl border border-[#0e428a] bg-[#042a59] p-2 shadow-2xl ring-1 ring-black/50 z-50 animate-in fade-in zoom-in-95 duration-100"
                 onMouseLeave={() => setDemoMenuOpen(false)}
               >
-                <div className="px-2.5 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-slate-500">
+                <div className="px-2.5 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-slate-400">
                   Instant Demo Roles
                 </div>
                 <button
                   type="button"
                   onClick={() => handleQuickSwitch("admin")}
-                  className="flex w-full items-center justify-between rounded-xl px-2.5 py-2 text-left text-xs font-semibold text-slate-200 hover:bg-[#1a1f2e] hover:text-purple-300 transition"
+                  className="flex w-full items-center justify-between rounded-xl px-2.5 py-2 text-left text-xs font-semibold text-slate-200 hover:bg-[#0a3875] hover:text-purple-300 transition"
                 >
-                  <span className="text-purple-400 font-bold">Admin</span>
+                  <span className="text-purple-300 font-bold">Admin</span>
                   <span className="text-[10px] text-slate-400">Fleet & Passes</span>
                 </button>
                 <button
                   type="button"
                   onClick={() => handleQuickSwitch("conductor")}
-                  className="flex w-full items-center justify-between rounded-xl px-2.5 py-2 text-left text-xs font-semibold text-slate-200 hover:bg-[#1a1f2e] hover:text-[#00f5a0] transition"
+                  className="flex w-full items-center justify-between rounded-xl px-2.5 py-2 text-left text-xs font-semibold text-slate-200 hover:bg-[#0a3875] hover:text-[#7C9ED9] transition"
                 >
-                  <span className="text-[#00f5a0] font-bold">Conductor</span>
+                  <span className="text-[#7C9ED9] font-bold">Conductor</span>
                   <span className="text-[10px] text-slate-400">Live QR Scanner</span>
                 </button>
-                <div className="my-1.5 border-t border-[#1f2433]"></div>
-                <div className="px-2.5 py-1 text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">
+                <div className="my-1.5 border-t border-[#0e428a]"></div>
+                <div className="px-2.5 py-1 text-[10px] font-extrabold text-slate-400 uppercase tracking-wider">
                   Student Scenarios:
                 </div>
                 <button
                   type="button"
                   onClick={() => handleQuickSwitch("student_active")}
-                  className="flex w-full items-center justify-between rounded-xl px-2.5 py-1.5 text-left text-xs text-slate-200 hover:bg-[#1a1f2e] transition"
+                  className="flex w-full items-center justify-between rounded-xl px-2.5 py-1.5 text-left text-xs text-slate-200 hover:bg-[#0a3875] transition"
                 >
                   <span>Rahul (Active Pass)</span>
-                  <span className="rounded bg-[#00f5a0]/20 text-[#00f5a0] px-1.5 py-0.2 text-[10px] font-bold">VALID</span>
+                  <span className="rounded bg-[#7C9ED9]/25 text-[#7C9ED9] px-1.5 py-0.2 text-[10px] font-bold">VALID</span>
                 </button>
                 <button
                   type="button"
                   onClick={() => handleQuickSwitch("student_expired")}
-                  className="flex w-full items-center justify-between rounded-xl px-2.5 py-1.5 text-left text-xs text-slate-200 hover:bg-[#1a1f2e] transition"
+                  className="flex w-full items-center justify-between rounded-xl px-2.5 py-1.5 text-left text-xs text-slate-200 hover:bg-[#0a3875] transition"
                 >
                   <span>Arjun (Expired Pass)</span>
                   <span className="rounded bg-amber-500/20 text-amber-300 px-1.5 py-0.2 text-[10px] font-bold">EXPIRED</span>
@@ -203,7 +203,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => handleQuickSwitch("student_suspended")}
-                  className="flex w-full items-center justify-between rounded-xl px-2.5 py-1.5 text-left text-xs text-slate-200 hover:bg-[#1a1f2e] transition"
+                  className="flex w-full items-center justify-between rounded-xl px-2.5 py-1.5 text-left text-xs text-slate-200 hover:bg-[#0a3875] transition"
                 >
                   <span>Priya (Lost Card)</span>
                   <span className="rounded bg-rose-500/20 text-rose-300 px-1.5 py-0.2 text-[10px] font-bold">BLOCKED</span>
@@ -211,7 +211,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => handleQuickSwitch("student_pending")}
-                  className="flex w-full items-center justify-between rounded-xl px-2.5 py-1.5 text-left text-xs text-slate-200 hover:bg-[#1a1f2e] transition"
+                  className="flex w-full items-center justify-between rounded-xl px-2.5 py-1.5 text-left text-xs text-slate-200 hover:bg-[#0a3875] transition"
                 >
                   <span>Ananya (Pending)</span>
                   <span className="rounded bg-slate-700 text-slate-300 px-1.5 py-0.2 text-[10px] font-bold">PENDING</span>
@@ -226,7 +226,7 @@ export default function Navbar() {
               <div className="hidden sm:flex flex-col items-end">
                 <span className="text-xs font-bold text-white">{user.name}</span>
                 <div className="flex items-center gap-1.5">
-                  <span className="text-[10px] font-mono text-slate-400">{user.studentId || user.email}</span>
+                  <span className="text-[10px] font-mono text-slate-300">{user.studentId || user.email}</span>
                   {getRoleBadge(user.role)}
                 </div>
               </div>
@@ -235,14 +235,14 @@ export default function Navbar() {
                 <img
                   src={user.photoUrl}
                   alt={user.name}
-                  className="h-9 w-9 rounded-xl object-cover ring-2 ring-[#00f5a0]/40 shadow-mint-sm"
+                  className="h-9 w-9 rounded-xl object-cover ring-2 ring-[#7C9ED9]/50 shadow-vista-sm"
                 />
               )}
 
               <button
                 type="button"
                 onClick={handleLogout}
-                className="flex items-center gap-1.5 rounded-xl border border-[#222838] bg-[#161a25] px-3 py-1.5 text-xs font-semibold text-slate-300 transition hover:bg-[#202534] hover:text-rose-400"
+                className="flex items-center gap-1.5 rounded-xl border border-[#0e428a] bg-[#052e64] px-3 py-1.5 text-xs font-semibold text-slate-200 transition hover:bg-[#0a3875] hover:text-rose-400"
                 title="Sign out"
               >
                 <LogOut size={14} />
@@ -253,13 +253,13 @@ export default function Navbar() {
             <div className="flex items-center gap-2">
               <Link
                 to="/login"
-                className="rounded-xl px-3.5 py-1.5 text-xs font-bold text-slate-300 transition hover:text-white hover:bg-[#161a25]"
+                className="rounded-xl px-3.5 py-1.5 text-xs font-bold text-slate-200 transition hover:text-white hover:bg-[#052e64]"
               >
                 Sign In
               </Link>
               <Link
                 to="/register"
-                className="rounded-xl bg-[#00f5a0] px-4 py-1.5 text-xs font-black text-slate-950 shadow-mint transition hover:bg-[#00d68b]"
+                className="rounded-xl bg-[#7C9ED9] px-4 py-1.5 text-xs font-black text-[#001733] shadow-vista transition hover:bg-[#688ed0]"
               >
                 Register
               </Link>

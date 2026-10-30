@@ -3,7 +3,7 @@
 :root {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: #f1f5f9;
-  background-color: #090a0f;
+  background-color: #001733;
   -webkit-font-smoothing: antialiased;
   color-scheme: dark;
 }
@@ -11,53 +11,70 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #090a0f;
+  background-color: #001733;
   color: #f1f5f9;
 }
 
-/* Custom Scrollbars in Carbon Black with Electric Mint Thumb */
+/* Custom Scrollbars in Oxford Blue with Vista Blue Thumb */
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #090a0f;
+  background: #001733;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e2433;
+  background: #0d3572;
   border-radius: 9999px;
-  border: 1px solid rgba(0, 245, 160, 0.2);
+  border: 1px solid rgba(124, 158, 217, 0.25);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #00f5a0;
+  background: #7C9ED9;
 }
 
-/* Mint Glow Utility */
+/* Vista Blue Glow Utility */
+.shadow-vista {
+  box-shadow: 0 0 25px -5px rgba(124, 158, 217, 0.4);
+}
+
+.shadow-vista-sm {
+  box-shadow: 0 0 15px -3px rgba(124, 158, 217, 0.3);
+}
+
+.border-vista-glow {
+  border-color: rgba(124, 158, 217, 0.4);
+}
+
+/* Backward compatibility aliases */
 .shadow-mint {
-  box-shadow: 0 0 25px -5px rgba(0, 245, 160, 0.35);
+  box-shadow: 0 0 25px -5px rgba(124, 158, 217, 0.4);
 }
 
 .shadow-mint-sm {
-  box-shadow: 0 0 15px -3px rgba(0, 245, 160, 0.25);
+  box-shadow: 0 0 15px -3px rgba(124, 158, 217, 0.3);
 }
 
 .border-mint-glow {
-  border-color: rgba(0, 245, 160, 0.35);
+  border-color: rgba(124, 158, 217, 0.4);
 }
 
-@keyframes pulse-mint {
+@keyframes pulse-vista {
   0%, 100% {
     opacity: 1;
     transform: scale(1);
-    box-shadow: 0 0 20px rgba(0, 245, 160, 0.4);
+    box-shadow: 0 0 20px rgba(124, 158, 217, 0.4);
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.85;
     transform: scale(1.02);
-    box-shadow: 0 0 30px rgba(0, 245, 160, 0.7);
+    box-shadow: 0 0 30px rgba(124, 158, 217, 0.7);
   }
 }
 
+.animate-pulse-vista {
+  animation: pulse-vista 2.5s ease-in-out infinite;
+}
+
 .animate-pulse-mint {
-  animation: pulse-mint 2.5s ease-in-out infinite;
+  animation: pulse-vista 2.5s ease-in-out infinite;
 }

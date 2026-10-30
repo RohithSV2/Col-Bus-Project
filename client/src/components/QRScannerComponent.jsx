@@ -101,16 +101,16 @@ export default function QRScannerComponent({ onScanSuccess, isVerifying }) {
   };
 
   return (
-    <div className="rounded-3xl border border-[#222838] bg-[#12151e] p-6 shadow-2xl text-white">
-      {/* Mode Selector Tabs (Carbon & Mint) */}
-      <div className="flex rounded-2xl bg-[#090b10] p-1.5 mb-6 border border-[#1b202e]">
+    <div className="rounded-3xl border border-[#0e428a] bg-[#042a59] p-6 shadow-2xl text-white">
+      {/* Mode Selector Tabs (Oxford & Vista) */}
+      <div className="flex rounded-2xl bg-[#001733] p-1.5 mb-6 border border-[#0d3b78]">
         <button
           type="button"
           onClick={() => setScanMode("camera")}
           className={`flex-1 flex items-center justify-center gap-2 rounded-xl py-2.5 text-xs font-bold transition ${
             scanMode === "camera"
-              ? "bg-[#00f5a0] text-slate-950 shadow-mint-sm"
-              : "text-slate-400 hover:text-white"
+              ? "bg-[#7C9ED9] text-[#001733] shadow-vista-sm"
+              : "text-slate-300 hover:text-white"
           }`}
         >
           <Camera size={16} />
@@ -121,8 +121,8 @@ export default function QRScannerComponent({ onScanSuccess, isVerifying }) {
           onClick={() => setScanMode("upload")}
           className={`flex-1 flex items-center justify-center gap-2 rounded-xl py-2.5 text-xs font-bold transition ${
             scanMode === "upload"
-              ? "bg-[#00f5a0] text-slate-950 shadow-mint-sm"
-              : "text-slate-400 hover:text-white"
+              ? "bg-[#7C9ED9] text-[#001733] shadow-vista-sm"
+              : "text-slate-300 hover:text-white"
           }`}
         >
           <Upload size={16} />
@@ -133,8 +133,8 @@ export default function QRScannerComponent({ onScanSuccess, isVerifying }) {
           onClick={() => setScanMode("manual")}
           className={`flex-1 flex items-center justify-center gap-2 rounded-xl py-2.5 text-xs font-bold transition ${
             scanMode === "manual"
-              ? "bg-[#00f5a0] text-slate-950 shadow-mint-sm"
-              : "text-slate-400 hover:text-white"
+              ? "bg-[#7C9ED9] text-[#001733] shadow-vista-sm"
+              : "text-slate-300 hover:text-white"
           }`}
         >
           <Keyboard size={16} />
@@ -145,12 +145,12 @@ export default function QRScannerComponent({ onScanSuccess, isVerifying }) {
       {/* Camera Mode */}
       {scanMode === "camera" && (
         <div className="flex flex-col items-center">
-          <div className="relative w-full max-w-sm overflow-hidden rounded-2xl bg-[#08090f] border-2 border-[#00f5a0]/40 shadow-mint">
+          <div className="relative w-full max-w-sm overflow-hidden rounded-2xl bg-[#001530] border-2 border-[#7C9ED9]/50 shadow-vista">
             <div id="reader" className="w-full"></div>
             {isVerifying && (
-              <div className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center text-white">
-                <RefreshCw size={30} className="animate-spin text-[#00f5a0]" />
-                <span className="ml-3 font-bold text-xs text-[#00f5a0]">Verifying with Database...</span>
+              <div className="absolute inset-0 bg-[#001733]/90 backdrop-blur-sm flex items-center justify-center text-white">
+                <RefreshCw size={30} className="animate-spin text-[#7C9ED9]" />
+                <span className="ml-3 font-bold text-xs text-[#7C9ED9]">Verifying with Database...</span>
               </div>
             )}
           </div>
@@ -165,7 +165,7 @@ export default function QRScannerComponent({ onScanSuccess, isVerifying }) {
             </div>
           )}
 
-          <p className="mt-3 text-xs text-slate-400 text-center">
+          <p className="mt-3 text-xs text-slate-300 text-center">
             Point camera at the student's digital bus pass QR code.
           </p>
         </div>
@@ -175,10 +175,10 @@ export default function QRScannerComponent({ onScanSuccess, isVerifying }) {
       {scanMode === "upload" && (
         <div className="flex flex-col items-center py-6">
           <div id="reader-hidden" className="hidden"></div>
-          <label className="flex flex-col items-center justify-center w-full max-w-sm h-48 border-2 border-dashed border-[#2b3347] rounded-2xl cursor-pointer bg-[#0c0e15] hover:bg-[#141723] hover:border-[#00f5a0]/50 transition p-6 text-center">
-            <Upload size={36} className="text-[#00f5a0] mb-2" />
+          <label className="flex flex-col items-center justify-center w-full max-w-sm h-48 border-2 border-dashed border-[#114b99] rounded-2xl cursor-pointer bg-[#021836] hover:bg-[#072852] hover:border-[#7C9ED9]/70 transition p-6 text-center">
+            <Upload size={36} className="text-[#7C9ED9] mb-2" />
             <span className="text-xs font-bold text-white">Select Pass QR Screenshot or Photo</span>
-            <span className="text-[10px] text-slate-500 mt-1">PNG, JPG, or WEBP images</span>
+            <span className="text-[10px] text-slate-400 mt-1">PNG, JPG, or WEBP images</span>
             <input
               type="file"
               accept="image/*"
@@ -193,7 +193,7 @@ export default function QRScannerComponent({ onScanSuccess, isVerifying }) {
       {scanMode === "manual" && (
         <form onSubmit={handleManualSubmit} className="max-w-sm mx-auto space-y-3 py-4">
           <div>
-            <label className="block text-xs font-bold text-slate-300 mb-1">
+            <label className="block text-xs font-bold text-slate-200 mb-1">
               Enter Pass ID or QR Token
             </label>
             <input
@@ -201,33 +201,33 @@ export default function QRScannerComponent({ onScanSuccess, isVerifying }) {
               value={manualInput}
               onChange={(e) => setManualInput(e.target.value)}
               placeholder="e.g. PASS-A8X72K or TOK-SEC-A8X72K-9918"
-              className="w-full rounded-xl border border-[#272e40] bg-[#0c0e15] px-4 py-2.5 text-xs text-white font-mono focus:border-[#00f5a0] focus:outline-none"
+              className="w-full rounded-xl border border-[#114b99] bg-[#021836] px-4 py-2.5 text-xs text-white font-mono focus:border-[#7C9ED9] focus:outline-none"
             />
           </div>
           <button
             type="submit"
             disabled={isVerifying || !manualInput.trim()}
-            className="w-full rounded-xl bg-[#00f5a0] px-4 py-2.5 text-xs font-black text-slate-950 shadow-mint transition hover:bg-[#00d68b] disabled:opacity-50"
+            className="w-full rounded-xl bg-[#7C9ED9] px-4 py-2.5 text-xs font-black text-[#001733] shadow-vista transition hover:bg-[#688ed0] disabled:opacity-50"
           >
             {isVerifying ? "Verifying..." : "Verify Pass Now"}
           </button>
         </form>
       )}
 
-      {/* Quick Test / Simulator Bar in Electric Mint Theme */}
-      <div className="mt-6 border-t border-[#1d2230] pt-4">
-        <div className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-wider text-slate-400 mb-2.5">
-          <Sparkles size={13} className="text-[#00f5a0]" />
+      {/* Quick Test / Simulator Bar in Vista Blue & Oxford Theme */}
+      <div className="mt-6 border-t border-[#0e3b79] pt-4">
+        <div className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-wider text-slate-300 mb-2.5">
+          <Sparkles size={13} className="text-[#7C9ED9]" />
           <span>Quick Conductor Test Simulator (1-Click QR Scans)</span>
         </div>
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
           <button
             type="button"
             onClick={() => handleSimulate("TOK-SEC-A8X72K-9918")}
-            className="rounded-xl border border-[#00f5a0]/40 bg-[#00f5a0]/10 p-2 text-left text-xs text-white hover:bg-[#00f5a0]/20 transition shadow-mint-sm"
+            className="rounded-xl border border-[#7C9ED9]/50 bg-[#7C9ED9]/20 p-2 text-left text-xs text-white hover:bg-[#7C9ED9]/30 transition shadow-vista-sm"
           >
-            <div className="font-bold text-xs text-[#00f5a0]">Rahul (Active)</div>
-            <div className="text-[10px] text-[#00f5a0] font-black">VALID PASS</div>
+            <div className="font-bold text-xs text-[#7C9ED9]">Rahul (Active)</div>
+            <div className="text-[10px] text-[#A5C2F6] font-black">VALID PASS</div>
           </button>
           <button
             type="button"

@@ -27,10 +27,10 @@ export default function DigitalPassCard({ pass, student, onRenew, onReportIssue 
 
   if (!pass) {
     return (
-      <div className="rounded-3xl border border-[#222838] bg-[#12151e] p-10 text-center shadow-xl">
-        <BusFront className="mx-auto h-12 w-12 text-[#00f5a0]" />
+      <div className="rounded-3xl border border-[#0e428a] bg-[#042a59] p-10 text-center shadow-xl">
+        <BusFront className="mx-auto h-12 w-12 text-[#7C9ED9]" />
         <h3 className="mt-3 text-lg font-bold text-white">No Bus Pass Issued Yet</h3>
-        <p className="mt-1 text-xs text-slate-400 max-w-md mx-auto">
+        <p className="mt-1 text-xs text-slate-300 max-w-md mx-auto">
           You do not have an active digital bus pass. Apply for your route pass below or wait for transport admin approval.
         </p>
       </div>
@@ -52,8 +52,8 @@ export default function DigitalPassCard({ pass, student, onRenew, onReportIssue 
     switch (pass.status) {
       case "active":
         return (
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#00f5a0]/20 border border-[#00f5a0]/60 px-3 py-1 text-xs font-black text-[#00f5a0] shadow-mint-sm">
-            <span className="h-2 w-2 rounded-full bg-[#00f5a0] animate-ping"></span>
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#7C9ED9]/25 border border-[#7C9ED9]/70 px-3 py-1 text-xs font-black text-[#7C9ED9] shadow-vista-sm">
+            <span className="h-2 w-2 rounded-full bg-[#7C9ED9] animate-ping"></span>
             ACTIVE PASS
           </span>
         );
@@ -89,31 +89,31 @@ export default function DigitalPassCard({ pass, student, onRenew, onReportIssue 
 
   return (
     <div className="flex flex-col items-center">
-      {/* The Printable / Viewable Pass Card (Carbon Black & Electric Mint) */}
+      {/* The Printable / Viewable Pass Card (Oxford Blue & Vista Blue) */}
       <div
         id="digital-bus-pass"
-        className="w-full max-w-md overflow-hidden rounded-3xl bg-[#0d0f17] text-white shadow-2xl ring-1 ring-[#00f5a0]/30 border border-[#1f2434] relative shadow-mint"
+        className="w-full max-w-md overflow-hidden rounded-3xl bg-[#031d40] text-white shadow-2xl ring-1 ring-[#7C9ED9]/30 border border-[#0e428a] relative shadow-vista"
       >
-        {/* Holographic Watermark / Top Band in Electric Mint */}
-        <div className="bg-gradient-to-r from-[#00f5a0] via-[#059669] to-[#00f5a0] px-5 py-3 text-slate-950 flex items-center justify-between border-b border-[#00f5a0]/40">
+        {/* Holographic Watermark / Top Band in Vista Blue */}
+        <div className="bg-gradient-to-r from-[#7C9ED9] via-[#527ec5] to-[#7C9ED9] px-5 py-3 text-[#001733] flex items-center justify-between border-b border-[#7C9ED9]/40">
           <div className="flex items-center gap-2">
-            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-slate-950 text-[#00f5a0] shadow-sm">
+            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#001733] text-[#7C9ED9] shadow-sm">
               <BusFront size={17} className="stroke-[2.5]" />
             </div>
             <div>
-              <p className="text-[11px] font-black uppercase tracking-wider text-slate-950">
+              <p className="text-[11px] font-black uppercase tracking-wider text-[#001733]">
                 Apex Institute of Technology
               </p>
-              <p className="text-[9px] font-bold text-slate-900/90 tracking-wide">Smart Transit Digital Bus Pass</p>
+              <p className="text-[9px] font-bold text-[#002147]/90 tracking-wide">Smart Transit Digital Bus Pass</p>
             </div>
           </div>
           <div>{getStatusBadge()}</div>
         </div>
 
         {/* Live Security Pulse Bar (Anti-screenshot feature) */}
-        <div className="bg-[#121622] px-4 py-1.5 flex items-center justify-between text-[10px] border-b border-[#1c2232] font-mono text-[#00f5a0]">
+        <div className="bg-[#001838] px-4 py-1.5 flex items-center justify-between text-[10px] border-b border-[#0d3b78] font-mono text-[#7C9ED9]">
           <div className="flex items-center gap-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#00f5a0] animate-pulse"></span>
+            <span className="h-1.5 w-1.5 rounded-full bg-[#7C9ED9] animate-pulse"></span>
             <span>LIVE SECURE TOKEN: {liveTime}</span>
           </div>
           <span className="text-white font-bold">{pass.passId}</span>
@@ -127,16 +127,16 @@ export default function DigitalPassCard({ pass, student, onRenew, onReportIssue 
               <img
                 src={pass.photoUrl || student?.photoUrl || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80"}
                 alt={pass.studentName}
-                className="h-20 w-20 rounded-2xl object-cover ring-2 ring-[#00f5a0]/60 shadow-mint-sm"
+                className="h-20 w-20 rounded-2xl object-cover ring-2 ring-[#7C9ED9]/60 shadow-vista-sm"
               />
-              <div className="absolute -bottom-2 -right-2 rounded-full bg-[#00f5a0] p-1 text-slate-950 shadow">
+              <div className="absolute -bottom-2 -right-2 rounded-full bg-[#7C9ED9] p-1 text-[#001733] shadow">
                 <ShieldCheck size={14} className="stroke-[2.5]" />
               </div>
             </div>
 
             <div className="flex-1 min-w-0">
               <h2 className="text-xl font-black tracking-tight text-white truncate">{pass.studentName}</h2>
-              <p className="text-xs font-mono font-bold text-[#00f5a0] mt-0.5">
+              <p className="text-xs font-mono font-bold text-[#7C9ED9] mt-0.5">
                 ID: {pass.studentId}
               </p>
               <p className="text-xs text-slate-300 mt-1 truncate">
@@ -174,20 +174,20 @@ export default function DigitalPassCard({ pass, student, onRenew, onReportIssue 
             </div>
           </div>
 
-          {/* Route & Bus Details Card (Carbon Slate + Mint Accents) */}
-          <div className="mt-5 rounded-2xl bg-[#131622] border border-[#22283a] p-4 space-y-2.5">
+          {/* Route & Bus Details Card (Oxford Blue Surface + Vista Accents) */}
+          <div className="mt-5 rounded-2xl bg-[#021836] border border-[#0e428a] p-4 space-y-2.5">
             <div className="flex items-center justify-between text-xs">
-              <span className="text-slate-400 flex items-center gap-1.5">
-                <BusFront size={14} className="text-[#00f5a0]" /> Assigned Bus:
+              <span className="text-slate-300 flex items-center gap-1.5">
+                <BusFront size={14} className="text-[#7C9ED9]" /> Assigned Bus:
               </span>
-              <span className="font-black text-white font-mono bg-[#1c2233] px-2.5 py-0.5 rounded border border-[#2d364d]">
+              <span className="font-black text-white font-mono bg-[#052857] px-2.5 py-0.5 rounded border border-[#114b99]">
                 {pass.busNumber || "Bus Fleet"}
               </span>
             </div>
 
             <div className="flex items-center justify-between text-xs">
-              <span className="text-slate-400 flex items-center gap-1.5">
-                <MapPin size={14} className="text-[#00f5a0]" /> Route:
+              <span className="text-slate-300 flex items-center gap-1.5">
+                <MapPin size={14} className="text-[#7C9ED9]" /> Route:
               </span>
               <span className="font-semibold text-slate-200 truncate max-w-[200px]" title={pass.routeName}>
                 {pass.routeName}
@@ -195,17 +195,17 @@ export default function DigitalPassCard({ pass, student, onRenew, onReportIssue 
             </div>
 
             <div className="flex items-center justify-between text-xs">
-              <span className="text-slate-400 flex items-center gap-1.5">
+              <span className="text-slate-300 flex items-center gap-1.5">
                 <MapPin size={14} className="text-cyan-400" /> Boarding Stop:
               </span>
-              <span className="font-bold text-[#00f5a0]">
+              <span className="font-bold text-[#7C9ED9]">
                 {pass.pickupStop}
               </span>
             </div>
 
-            <div className="border-t border-[#1f2536] pt-2 flex items-center justify-between text-xs">
-              <span className="text-slate-400 flex items-center gap-1.5">
-                <Calendar size={14} className="text-[#00f5a0]" /> Valid Until:
+            <div className="border-t border-[#0e3b79] pt-2 flex items-center justify-between text-xs">
+              <span className="text-slate-300 flex items-center gap-1.5">
+                <Calendar size={14} className="text-[#7C9ED9]" /> Valid Until:
               </span>
               <span className={`font-black font-mono ${pass.status === 'expired' ? 'text-amber-400' : 'text-white'}`}>
                 {pass.expiryDate}
@@ -230,7 +230,7 @@ export default function DigitalPassCard({ pass, student, onRenew, onReportIssue 
         </div>
 
         {/* Card Footer Microtext */}
-        <div className="bg-[#08090e] px-6 py-2.5 text-center text-[10px] text-slate-500 border-t border-[#1b202e]">
+        <div className="bg-[#00142e] px-6 py-2.5 text-center text-[10px] text-slate-400 border-t border-[#0d3b78]">
           Non-transferable • Must be presented upon request • Transport Authority ID: APEX-BUS-2026
         </div>
       </div>
@@ -240,7 +240,7 @@ export default function DigitalPassCard({ pass, student, onRenew, onReportIssue 
         <button
           type="button"
           onClick={handlePrint}
-          className="inline-flex items-center gap-2 rounded-xl border border-[#282f42] bg-[#141824] px-4 py-2.5 text-xs font-bold text-slate-200 shadow-sm transition hover:bg-[#1e2333] hover:text-[#00f5a0]"
+          className="inline-flex items-center gap-2 rounded-xl border border-[#0e428a] bg-[#042a59] px-4 py-2.5 text-xs font-bold text-slate-200 shadow-sm transition hover:bg-[#0a3875] hover:text-[#7C9ED9]"
         >
           <Printer size={15} />
           Print / Save PDF
@@ -250,7 +250,7 @@ export default function DigitalPassCard({ pass, student, onRenew, onReportIssue 
           <button
             type="button"
             onClick={onRenew}
-            className="inline-flex items-center gap-2 rounded-xl bg-[#00f5a0] px-4 py-2.5 text-xs font-black text-slate-950 shadow-mint transition hover:bg-[#00d68b]"
+            className="inline-flex items-center gap-2 rounded-xl bg-[#7C9ED9] px-4 py-2.5 text-xs font-black text-[#001733] shadow-vista transition hover:bg-[#688ed0]"
           >
             <Clock size={15} />
             Request Renewal
