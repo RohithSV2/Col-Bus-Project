@@ -99,4 +99,10 @@ const startServer = async () => {
   });
 };
 
-startServer();
+if (!process.env.VERCEL) {
+  startServer();
+} else {
+  connectDB();
+}
+
+export default app;
