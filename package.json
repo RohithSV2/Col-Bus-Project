@@ -1,0 +1,22 @@
+{
+  "name": "smartbus-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SmartBus — Digital Bus Pass & Student Verification System",
+  "scripts": {
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "start:server": "npm start --prefix server",
+    "build:client": "npm run build --prefix client"
+  },
+  "keywords": [
+    "smartbus",
+    "bus-pass",
+    "student-verification",
+    "qr-code",
+    "full-stack",
+    "mern"
+  ],
+  "author": "SmartBus Team",
+  "license": "ISC"
+}

@@ -1,0 +1,530 @@
+{
+  "users": [
+    {
+      "id": "USR-ADMIN-01",
+      "studentId": "ADM001",
+      "name": "Prof. Vikram Singhania",
+      "email": "admin@smartbus.edu",
+      "password": "$2b$10$e19D85nN37ZofihaHr8n6eYvt2p3M7zLHO.JNP3adsrFIhRVwH5ge",
+      "role": "admin",
+      "institution": "Apex Institute of Technology",
+      "phone": "+91 98111 22334",
+      "department": "Transport & Student Affairs",
+      "isActive": true,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "USR-COND-01",
+      "studentId": "STF102",
+      "name": "Sanjay Deshmukh",
+      "email": "conductor@smartbus.edu",
+      "password": "$2b$10$e19D85nN37ZofihaHr8n6eV9sVKA3Uq50LR8G1hawFplerfVSbrsa",
+      "role": "conductor",
+      "institution": "Apex Institute of Technology",
+      "phone": "+91 98222 33445",
+      "assignedRouteId": "ROUTE-01",
+      "assignedBusNumber": "KA-09-AB-1234",
+      "isActive": true,
+      "createdAt": "2026-01-05T00:00:00.000Z"
+    },
+    {
+      "id": "USR-STUD-01",
+      "studentId": "COL2026001",
+      "name": "Rahul Kumar",
+      "email": "rahul@college.edu",
+      "password": "$2b$10$e19D85nN37ZofihaHr8n6eYqcnzGPq.USRgTFp1ar/lZMIGEC.dkq",
+      "role": "student",
+      "institution": "Apex Institute of Technology",
+      "course": "B.Tech Computer Science & Engineering",
+      "year": "3rd Year",
+      "phone": "+91 98765 11111",
+      "emergencyContact": "+91 98765 99999 (Father)",
+      "assignedRouteId": "ROUTE-01",
+      "pickupStop": "Metro Gate 2 Interchange",
+      "photoUrl": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=200&auto=format&fit=crop&q=80",
+      "isActive": true,
+      "createdAt": "2026-01-10T00:00:00.000Z"
+    },
+    {
+      "id": "USR-STUD-02",
+      "studentId": "COL2026002",
+      "name": "Ananya Iyer",
+      "email": "ananya@college.edu",
+      "password": "$2b$10$e19D85nN37ZofihaHr8n6eYqcnzGPq.USRgTFp1ar/lZMIGEC.dkq",
+      "role": "student",
+      "institution": "Apex Institute of Technology",
+      "course": "B.Tech Information Technology",
+      "year": "2nd Year",
+      "phone": "+91 98765 22222",
+      "emergencyContact": "+91 98765 88888 (Mother)",
+      "assignedRouteId": "ROUTE-02",
+      "pickupStop": "Green Garden Colony",
+      "photoUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&auto=format&fit=crop&q=80",
+      "isActive": true,
+      "createdAt": "2026-01-15T00:00:00.000Z"
+    },
+    {
+      "id": "USR-STUD-03",
+      "studentId": "COL2026003",
+      "name": "Arjun Reddy",
+      "email": "arjun@college.edu",
+      "password": "$2b$10$e19D85nN37ZofihaHr8n6eYqcnzGPq.USRgTFp1ar/lZMIGEC.dkq",
+      "role": "student",
+      "institution": "Apex Institute of Technology",
+      "course": "B.Tech Mechanical Engineering",
+      "year": "4th Year",
+      "phone": "+91 98765 33333",
+      "emergencyContact": "+91 98765 77777 (Father)",
+      "assignedRouteId": "ROUTE-03",
+      "pickupStop": "Silk Board Junction",
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80",
+      "isActive": true,
+      "createdAt": "2026-01-20T00:00:00.000Z"
+    },
+    {
+      "id": "USR-STUD-04",
+      "studentId": "COL2026004",
+      "name": "Priya Nair",
+      "email": "priya@college.edu",
+      "password": "$2b$10$e19D85nN37ZofihaHr8n6eYqcnzGPq.USRgTFp1ar/lZMIGEC.dkq",
+      "role": "student",
+      "institution": "Apex Institute of Technology",
+      "course": "B.Tech Electronics & Comm.",
+      "year": "1st Year",
+      "phone": "+91 98765 44444",
+      "emergencyContact": "+91 98765 66666 (Guardian)",
+      "assignedRouteId": "ROUTE-04",
+      "pickupStop": "Hilltop Residency",
+      "photoUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&auto=format&fit=crop&q=80",
+      "isActive": true,
+      "createdAt": "2026-02-01T00:00:00.000Z"
+    }
+  ],
+  "routes": [
+    {
+      "routeId": "ROUTE-01",
+      "routeName": "Route 1 — North Campus Express",
+      "busNumber": "KA-09-AB-1234",
+      "driverName": "Ramesh Sharma",
+      "driverPhone": "+91 98765 43210",
+      "capacity": 50,
+      "stops": [
+        {
+          "stopName": "Central Railway Station",
+          "stopOrder": 1,
+          "morningTime": "07:30 AM",
+          "eveningTime": "05:45 PM"
+        },
+        {
+          "stopName": "Metro Gate 2 Interchange",
+          "stopOrder": 2,
+          "morningTime": "07:45 AM",
+          "eveningTime": "05:30 PM"
+        },
+        {
+          "stopName": "City Square Mall Junction",
+          "stopOrder": 3,
+          "morningTime": "08:00 AM",
+          "eveningTime": "05:15 PM"
+        },
+        {
+          "stopName": "Shivaji Circle",
+          "stopOrder": 4,
+          "morningTime": "08:15 AM",
+          "eveningTime": "05:00 PM"
+        },
+        {
+          "stopName": "College Main Gate",
+          "stopOrder": 5,
+          "morningTime": "08:30 AM",
+          "eveningTime": "04:45 PM"
+        }
+      ],
+      "isActive": true
+    },
+    {
+      "routeId": "ROUTE-02",
+      "routeName": "Route 2 — East Suburbs Shuttle",
+      "busNumber": "KA-09-CD-5678",
+      "driverName": "Suresh Patil",
+      "driverPhone": "+91 98765 43211",
+      "capacity": 45,
+      "stops": [
+        {
+          "stopName": "Green Garden Colony",
+          "stopOrder": 1,
+          "morningTime": "07:20 AM",
+          "eveningTime": "05:50 PM"
+        },
+        {
+          "stopName": "IT Tech Park Cross",
+          "stopOrder": 2,
+          "morningTime": "07:40 AM",
+          "eveningTime": "05:30 PM"
+        },
+        {
+          "stopName": "Outer Ring Road Bridge",
+          "stopOrder": 3,
+          "morningTime": "08:05 AM",
+          "eveningTime": "05:10 PM"
+        },
+        {
+          "stopName": "Campus East Gate",
+          "stopOrder": 4,
+          "morningTime": "08:25 AM",
+          "eveningTime": "04:45 PM"
+        }
+      ],
+      "isActive": true
+    },
+    {
+      "routeId": "ROUTE-03",
+      "routeName": "Route 3 — South City Connector",
+      "busNumber": "KA-09-EF-9012",
+      "driverName": "Mahesh Gowda",
+      "driverPhone": "+91 98765 43212",
+      "capacity": 52,
+      "stops": [
+        {
+          "stopName": "South End Circle",
+          "stopOrder": 1,
+          "morningTime": "07:25 AM",
+          "eveningTime": "05:40 PM"
+        },
+        {
+          "stopName": "Royal Plaza Complex",
+          "stopOrder": 2,
+          "morningTime": "07:45 AM",
+          "eveningTime": "05:20 PM"
+        },
+        {
+          "stopName": "Silk Board Junction",
+          "stopOrder": 3,
+          "morningTime": "08:05 AM",
+          "eveningTime": "05:05 PM"
+        },
+        {
+          "stopName": "College Sports Arena Gate",
+          "stopOrder": 4,
+          "morningTime": "08:30 AM",
+          "eveningTime": "04:45 PM"
+        }
+      ],
+      "isActive": true
+    },
+    {
+      "routeId": "ROUTE-04",
+      "routeName": "Route 4 — West Hills Route",
+      "busNumber": "KA-09-GH-3456",
+      "driverName": "Anand Verma",
+      "driverPhone": "+91 98765 43213",
+      "capacity": 48,
+      "stops": [
+        {
+          "stopName": "Hilltop Residency",
+          "stopOrder": 1,
+          "morningTime": "07:15 AM",
+          "eveningTime": "05:55 PM"
+        },
+        {
+          "stopName": "Valley View Point",
+          "stopOrder": 2,
+          "morningTime": "07:35 AM",
+          "eveningTime": "05:35 PM"
+        },
+        {
+          "stopName": "Sunset Boulevard Stop",
+          "stopOrder": 3,
+          "morningTime": "08:00 AM",
+          "eveningTime": "05:10 PM"
+        },
+        {
+          "stopName": "College Main Gate",
+          "stopOrder": 4,
+          "morningTime": "08:30 AM",
+          "eveningTime": "04:45 PM"
+        }
+      ],
+      "isActive": true
+    }
+  ],
+  "passes": [
+    {
+      "passId": "PASS-A8X72K",
+      "studentId": "COL2026001",
+      "studentName": "Rahul Kumar",
+      "institution": "Apex Institute of Technology",
+      "course": "B.Tech CSE",
+      "routeId": "ROUTE-01",
+      "routeName": "Route 1 — North Campus Express",
+      "busNumber": "KA-09-AB-1234",
+      "pickupStop": "Metro Gate 2 Interchange",
+      "photoUrl": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=200&auto=format&fit=crop&q=80",
+      "issuedDate": "2026-01-10",
+      "expiryDate": "2026-12-31",
+      "status": "active",
+      "qrVerificationToken": "TOK-SEC-A8X72K-9918",
+      "passType": "Annual Semester Pass",
+      "issuedBy": "ADM001",
+      "emergencyContact": "+91 98765 99999",
+      "history": [
+        {
+          "action": "Application Submitted",
+          "date": "2026-01-10",
+          "note": "Student applied online"
+        },
+        {
+          "action": "Pass Approved & Issued",
+          "date": "2026-01-11",
+          "note": "Approved by Transport Admin"
+        }
+      ]
+    },
+    {
+      "passId": "PASS-B2M94W",
+      "studentId": "COL2026002",
+      "studentName": "Ananya Iyer",
+      "institution": "Apex Institute of Technology",
+      "course": "B.Tech IT",
+      "routeId": "ROUTE-02",
+      "routeName": "Route 2 — East Suburbs Shuttle",
+      "busNumber": "KA-09-CD-5678",
+      "pickupStop": "Green Garden Colony",
+      "photoUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&auto=format&fit=crop&q=80",
+      "issuedDate": "2026-01-15",
+      "expiryDate": "2026-06-30",
+      "status": "pending",
+      "qrVerificationToken": "TOK-SEC-B2M94W-4412",
+      "passType": "Semester Pass",
+      "issuedBy": null,
+      "emergencyContact": "+91 98765 88888",
+      "history": [
+        {
+          "action": "Application Submitted",
+          "date": "2026-01-15",
+          "note": "Awaiting administrative review"
+        }
+      ]
+    },
+    {
+      "passId": "PASS-C5Q31T",
+      "studentId": "COL2026003",
+      "studentName": "Arjun Reddy",
+      "institution": "Apex Institute of Technology",
+      "course": "B.Tech ME",
+      "routeId": "ROUTE-03",
+      "routeName": "Route 3 — South City Connector",
+      "busNumber": "KA-09-EF-9012",
+      "pickupStop": "Silk Board Junction",
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80",
+      "issuedDate": "2025-08-01",
+      "expiryDate": "2026-01-15",
+      "status": "expired",
+      "qrVerificationToken": "TOK-SEC-C5Q31T-7721",
+      "passType": "Term Pass",
+      "issuedBy": "ADM001",
+      "emergencyContact": "+91 98765 77777",
+      "history": [
+        {
+          "action": "Issued",
+          "date": "2025-08-01",
+          "note": "Term pass issued"
+        },
+        {
+          "action": "Expired",
+          "date": "2026-01-15",
+          "note": "Pass validity period concluded"
+        }
+      ]
+    },
+    {
+      "passId": "PASS-D9L82Z",
+      "studentId": "COL2026004",
+      "studentName": "Priya Nair",
+      "institution": "Apex Institute of Technology",
+      "course": "B.Tech ECE",
+      "routeId": "ROUTE-04",
+      "routeName": "Route 4 — West Hills Route",
+      "busNumber": "KA-09-GH-3456",
+      "pickupStop": "Hilltop Residency",
+      "photoUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&auto=format&fit=crop&q=80",
+      "issuedDate": "2026-02-01",
+      "expiryDate": "2026-11-30",
+      "status": "suspended",
+      "qrVerificationToken": "TOK-SEC-D9L82Z-1109",
+      "passType": "Annual Pass",
+      "issuedBy": "ADM001",
+      "rejectionReason": "Student reported physical pass lost/stolen. Card suspended for security.",
+      "emergencyContact": "+91 98765 66666",
+      "history": [
+        {
+          "action": "Issued",
+          "date": "2026-02-01",
+          "note": "Annual pass issued"
+        },
+        {
+          "action": "Suspended",
+          "date": "2026-02-15",
+          "note": "Suspended due to reported lost card"
+        }
+      ]
+    }
+  ],
+  "renewals": [
+    {
+      "requestId": "REN-2026-001",
+      "passId": "PASS-C5Q31T",
+      "studentId": "COL2026003",
+      "studentName": "Arjun Reddy",
+      "currentExpiryDate": "2026-01-15",
+      "requestedExtensionDays": 180,
+      "status": "pending",
+      "requestDate": "2026-01-16",
+      "comments": "Semester fee paid. Please extend bus pass for upcoming semester 6.",
+      "receiptNumber": "FEE-2026-REC-9411"
+    }
+  ],
+  "issues": [
+    {
+      "issueId": "ISSUE-2026-101",
+      "studentId": "COL2026004",
+      "studentName": "Priya Nair",
+      "passId": "PASS-D9L82Z",
+      "issueType": "lost_pass",
+      "description": "Lost my physical laminated card near Metro Station. Requesting digital pass re-validation and physical card replacement.",
+      "status": "in_progress",
+      "createdAt": "2026-02-15T10:30:00Z",
+      "resolutionNote": "Pass suspended. Digital pass can be re-issued upon verification."
+    },
+    {
+      "issueId": "ISSUE-2026-102",
+      "studentId": "COL2026001",
+      "studentName": "Rahul Kumar",
+      "passId": "PASS-A8X72K",
+      "issueType": "wrong_route",
+      "description": "My boarding stop shifted from City Square to Metro Gate 2. Need confirmation that my pass is valid at the new stop.",
+      "status": "resolved",
+      "createdAt": "2026-02-10T14:15:00Z",
+      "resolvedAt": "2026-02-11T09:00:00Z",
+      "resolutionNote": "Stop updated in route master and pass profile."
+    }
+  ],
+  "logs": [
+    {
+      "logId": "LOG-437075",
+      "passId": "UNKNOWN",
+      "studentId": "UNKNOWN",
+      "studentName": "Unregistered Passenger",
+      "verifiedBy": "Sanjay Deshmukh (STF102)",
+      "routeId": "ROUTE-01",
+      "routeName": "Active Route",
+      "busNumber": "KA-09-AB-1234",
+      "verificationTime": "2026-10-30T18:37:17.075Z",
+      "result": "INVALID",
+      "scanMethod": "qr_camera",
+      "location": "Bus Entrance",
+      "reason": "QR Code or Pass ID is not recognized in the institutional database."
+    },
+    {
+      "logId": "LOG-420443",
+      "passId": "PASS-D9L82Z",
+      "studentId": "COL2026004",
+      "studentName": "Priya Nair",
+      "verifiedBy": "Sanjay Deshmukh (STF102)",
+      "routeId": "ROUTE-04",
+      "routeName": "Route 4 — West Hills Route",
+      "busNumber": "KA-09-GH-3456",
+      "verificationTime": "2026-10-30T18:37:00.443Z",
+      "result": "SUSPENDED",
+      "scanMethod": "qr_camera",
+      "location": "Bus Entrance",
+      "reason": "Student reported physical pass lost/stolen. Card suspended for security."
+    },
+    {
+      "logId": "LOG-382713",
+      "passId": "PASS-A8X72K",
+      "studentId": "COL2026001",
+      "studentName": "Rahul Kumar",
+      "verifiedBy": "Sanjay Deshmukh (STF102)",
+      "routeId": "ROUTE-01",
+      "routeName": "Route 1 — North Campus Express",
+      "busNumber": "KA-09-AB-1234",
+      "verificationTime": "2026-10-30T18:36:22.713Z",
+      "result": "VALID",
+      "scanMethod": "qr_camera",
+      "location": "Bus Entrance",
+      "reason": "Pass is active and in good standing."
+    },
+    {
+      "logId": "LOG-SCAN-001",
+      "passId": "PASS-A8X72K",
+      "studentId": "COL2026001",
+      "studentName": "Rahul Kumar",
+      "verifiedBy": "Sanjay Deshmukh (STF102)",
+      "routeId": "ROUTE-01",
+      "routeName": "Route 1 — North Campus Express",
+      "busNumber": "KA-09-AB-1234",
+      "verificationTime": "2026-10-30T18:12:05.297Z",
+      "result": "VALID",
+      "scanMethod": "qr_camera",
+      "location": "Metro Gate 2 Interchange"
+    },
+    {
+      "logId": "LOG-SCAN-002",
+      "passId": "PASS-C5Q31T",
+      "studentId": "COL2026003",
+      "studentName": "Arjun Reddy",
+      "verifiedBy": "Sanjay Deshmukh (STF102)",
+      "routeId": "ROUTE-01",
+      "routeName": "Route 1 — North Campus Express",
+      "busNumber": "KA-09-AB-1234",
+      "verificationTime": "2026-10-30T17:42:05.300Z",
+      "result": "EXPIRED",
+      "scanMethod": "qr_camera",
+      "location": "City Square Mall Junction"
+    },
+    {
+      "logId": "LOG-SCAN-003",
+      "passId": "PASS-D9L82Z",
+      "studentId": "COL2026004",
+      "studentName": "Priya Nair",
+      "verifiedBy": "Sanjay Deshmukh (STF102)",
+      "routeId": "ROUTE-01",
+      "routeName": "Route 1 — North Campus Express",
+      "busNumber": "KA-09-AB-1234",
+      "verificationTime": "2026-10-30T16:57:05.300Z",
+      "result": "SUSPENDED",
+      "scanMethod": "manual_id",
+      "location": "Central Railway Station"
+    }
+  ],
+  "notifications": [
+    {
+      "notificationId": "NOTIF-001",
+      "recipientId": "USR-STUD-01",
+      "title": "Digital Bus Pass Active",
+      "message": "Your bus pass for Route 1 (North Campus Express) is active and verified for the 2026 academic term.",
+      "type": "success",
+      "isRead": false,
+      "createdAt": "2026-10-29T18:27:05.300Z"
+    },
+    {
+      "notificationId": "NOTIF-002",
+      "recipientId": "USR-STUD-03",
+      "title": "Pass Expired",
+      "message": "Your bus pass expired on 15 Jan 2026. Please submit a renewal request to avoid travel interruption.",
+      "type": "warning",
+      "isRead": false,
+      "createdAt": "2026-10-28T18:27:05.300Z"
+    },
+    {
+      "notificationId": "NOTIF-003",
+      "recipientId": "USR-STUD-04",
+      "title": "Pass Suspended — Lost Report Logged",
+      "message": "Your pass has been temporarily suspended following your lost card report. Use your Student ID for identity verification.",
+      "type": "danger",
+      "isRead": false,
+      "createdAt": "2026-10-27T18:27:05.300Z"
+    }
+  ]
+}
